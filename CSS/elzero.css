@@ -3,6 +3,7 @@
     --main-color: #2196f3;
     --main-color-alt: #1787E0;
     --default-transition:0.3s;
+    --main-padding: 100px;
 
 }
 /* end variables */
@@ -51,7 +52,7 @@ a {
     }
 }
 .main-title {
-    margin: 50px auto;
+    margin: 0 auto 80px;
     padding: 10px 20px;
     width: fit-content;
     border: 2px solid  black;
@@ -327,6 +328,62 @@ a {
     animation: bouncing 1.5s infinite;
 }
 /*end landing */
+/* start articles */
+.articles {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+}
+.articles .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 40px;
+}
+.articles .box {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform var(--default-transition) box-shadow var(--default-transition);
+}
+.articles .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+.articles .box img {
+   width: 100%;
+   max-width: 100%;
+}
+.articles .box .content {
+    padding: 20px;
+}
+.articles .box .content h3 {
+    margin: 0;
+}
+.articles .box .content p {
+    margin: 10px 0 0;
+    line-height: 1.5;
+    color: #777
+}
+.articles .box .info {
+    padding: 20px;
+    border-top: 1px solid #E6E6E7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.articles .box .info a {
+    color: var(--main-color);
+    font-weight: bold;
+}   
+.articles .box .info i {
+    color: var(--main-color);
+}
+.articles .box:hover .info i {
+    animation: moving-arrow 0.6s linear infinite;
+}
+
+/* end articles */
 /* start animation  */
 @keyframes up-and-down {
     0%,100% {
@@ -359,7 +416,7 @@ a {
     100% {
         left: 0;
         border-radius: 0;
-        width: 50%;
+        width: 100%;
         height: 100%;
     }
 }
@@ -372,8 +429,14 @@ a {
     100% {
         right: 0;
         border-radius: 0;
-        width: 50%;
+        width: 100%;
         height: 100%;
     }
+}
+@keyframes moving-arrow { 
+   100% {
+        transform: translateX(10px);
+    }
+    
 }
 /* end animation  */
