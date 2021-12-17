@@ -429,6 +429,127 @@ a {
      transform: rotate(6deg) scale(1.1);
  }
 /* end gallery  */
+/* start features  */
+.features {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding) ;
+    position: relative;
+    background-color: white;
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+}
+.features .content {
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.features .content .image-holder {
+    position: relative;
+    overflow: hidden;
+}
+.features .content .image-holder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.features .content .image-holder::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 170px 500px;
+    border-color: transparent transparent white transparent;
+    transition: var(--default-transition);
+}
+.features .content .image-holder img {
+    max-width: 100%;
+}
+.features .content:hover .image-holder::after{
+    border-width: 170px 500px 170px 0px;
+} 
+.features .content h2 {
+    position: relative;
+    font-size: 40px;
+    margin: auto;
+    width: fit-content;
+}
+.features .content h2::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: 15px;
+    bottom: -20px;
+    width:calc(100% - 30px);
+}
+.features .content p {
+    line-height: 2;
+    font-size: 20px;
+    margin: 30px 0;
+    padding: 25px;
+    color: #777;
+}
+.features .content a {
+    display: block;
+    margin: 0 auto 30px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 4px solid;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: var(--default-transition);
+}
+.features .quality .image-holder::before {
+    background-color: rgb(244 64 54 / 60%);
+}
+.features .quality h2::after {
+    background-color: #f44036;
+}
+.features .quality a {
+    color: #f44036;
+    border-color: #f44036;
+    background: linear-gradient(to right ,#f44036 50%, white 50%); 
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .content:hover a {
+    background-position: left bottom ;
+    color: white;
+
+} 
+.features .time .image-holder::before {
+    background-color:   rgb(0 150 136 / 60%);
+}
+.features .time h2::after {
+    background-color: #009688;
+}
+.features .time a {
+    color:  #009688;
+    border-color:  #009688;
+    background: linear-gradient(to right , #009688 50%, white 50%); 
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .passion .image-holder::before {
+    background-color: rgb(3 169 244 / 60%);
+}
+.features .passion h2::after {
+    background-color: #03a9f4;
+}
+.features .passion a {
+    color: #03a9f4;
+    border-color: #03a9f4;
+    background: linear-gradient(to right ,#03a9f4 50%, white 50%); 
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+/* end features  */
 /* start animation  */
 @keyframes up-and-down {
     0%,100% {
