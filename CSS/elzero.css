@@ -60,6 +60,7 @@ a {
     text-transform: uppercase;
     position: relative;
     transition: var(--default-transition);
+    z-index: 1;
 
 }
 .main-title:hover {
@@ -434,7 +435,7 @@ a {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding) ;
     position: relative;
-    background-color: white;
+    /* background-color: white; */
 }
 .features .container {
     display: grid;
@@ -550,6 +551,53 @@ a {
     background-position: right bottom;
 }
 /* end features  */
+/* start testimonials */
+.testimonials {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: var(--section-background);
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+}
+.testimonials .box {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+    border-radius: 6px;
+    position: relative;
+}
+.testimonials .box img {
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--section-background);
+} 
+.testimonials .box h3 {
+    margin: 0 0 10px;
+    color: var(--main-color);
+}
+.testimonials .box .title {
+    display: block;
+    margin: 0 0 10px;
+    color: #777;
+}
+.testimonials .box .rate .filled {
+    color: #FFC107;
+}
+.testimonials .box p {
+    line-height: 1.5;
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* end testimonials */
 /* start animation  */
 @keyframes up-and-down {
     0%,100% {
