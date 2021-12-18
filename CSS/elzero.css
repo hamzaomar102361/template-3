@@ -683,6 +683,93 @@ a {
    margin-bottom: 25px;
 }
 /* end team-members  */
+/* start services  */
+.services {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: var(--section-background); 
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+}
+.services .box {
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    counter-increment: services;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--default-transition);
+    
+}
+.services .box::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 3px;
+    top: -3px;
+    background-color: var(--main-color );
+    transition: var(--default-transition);
+}
+.services .box:hover {
+    transform: translateY(-10px);
+}
+.services .box:hover::before {
+    width:100%;
+}
+.services .box > i {
+    display: block;
+    margin-top: 40px;
+    color: #d5d5d5
+}
+.services .box > h3 {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-top: 15px;
+}
+.services .box .info {
+    padding: 15px;
+    position: relative;
+    background-color: #f9f9f9;
+    width: 100%;
+    text-align: right;
+}
+.services .box .info::before {
+    content: "0"counter(services);
+    position: absolute;
+    background-color: var(--main-color);
+    color: white;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+}
+.services .box .info::after {
+    content: "";
+    position: absolute;
+    background-color: #ccc;
+    width: 50px;
+    height: 101%;
+    left: 80px;
+    bottom: 0px;
+    transform: skewX(-30deg);
+}
+.services .box .info a {
+    color: var(--main-color);
+}
+/* end services  */
 /* start animation  */
 @keyframes up-and-down {
     0%,100% {
