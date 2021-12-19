@@ -770,6 +770,57 @@ a {
     color: var(--main-color);
 }
 /* end services  */
+/* start our-skills  */
+.our-skills {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative; 
+}
+.our-skills .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 40px;
+}
+.our-skills .image img {
+   max-width: 100%;
+   margin-top: 30px;
+}
+.our-skills .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+}
+@media (max-width: 767px) {
+    .our-skills .content {
+        margin-right: 10px;
+    }
+}
+.our-skills .content .prog-holder > h4 {
+    font-size: 20px;
+}
+.our-skills .content .prog-holder .prog {
+    height: 30px;
+    background-color: #dedadc;
+    position: relative;
+}
+.our-skills .content .prog-holder .prog::before {
+    content: attr(data-progress);
+    position: absolute;
+    right: 0;
+    top: -125%;
+    border: 1px solid #ccc;
+    padding: 2px;
+    border-radius: 6px;
+    color: var(--main-color)
+}
+.our-skills .content .prog-holder .prog span {
+    position: relative;
+    background-color: var(--main-color);
+    display: block;
+    height: 100%;
+}
+/* end our-skills  */
 /* start animation  */
 @keyframes up-and-down {
     0%,100% {
