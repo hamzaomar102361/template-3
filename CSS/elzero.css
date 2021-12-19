@@ -824,7 +824,7 @@ a {
     height: 100%;
 }
 /* end our-skills  */
-/* start work steps  */
+/* start work-steps  */
 .work-steps {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
@@ -904,7 +904,7 @@ a {
     color: #777;
     font-size: 18px;
 }
-/* end work steps  */
+/* end work-steps  */
 /* start animation  */
 @keyframes up-and-down {
     0%,100% {
