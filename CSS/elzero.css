@@ -905,6 +905,135 @@ a {
     font-size: 18px;
 }
 /* end work-steps  */
+/* start Events  */
+.events {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;  
+}
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.events img {
+    max-width: 450px;
+}
+@media (max-width: 991px) {
+    .events img {
+        display: none ;
+    }
+}
+.events .info {
+    flex: 1;
+}
+.events .info .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    gap: 10px
+}
+.events .info .time .unit {
+    width: 75px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: var(--default-transition);
+}
+.events .info .time .unit span {
+    display: block;
+}
+.events .info .time .unit span:first-child {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 15px;
+}
+.events .info .time .unit span:last-child {
+    padding: 8px 10px;
+    font-size: 13px;
+    border-top: 1px solid #ccc;
+    transition: var(--default-transition);
+}
+.events .info .time .unit:hover {
+    border-color: var(--main-color);
+}
+.events .info .time .unit:hover span:last-child {
+    border-top-color: var(--main-color);
+}
+.events .info .title {
+    text-align: center;
+    font-size: 30px;
+}
+.events .info p {
+    text-align: center;
+    line-height: 1.8;
+    color: #777;
+    font-size: 19px;
+}
+.events .subscribe {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+.events .subscribe form {
+    width: 600px;
+    margin: 20px auto;
+    padding: 30px 40px;
+    background-color: #f6f5f5;
+    display: flex;
+    gap: 20px;
+    border-radius: 50px;
+}
+@media (max-width: 767px) {
+    .events .subscribe form {
+        max-width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        border-radius: 0;
+    }
+}
+.events .subscribe form input[type="email"] {
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    flex: 1;
+    caret-color: var(--main-color);
+}
+@media (max-width: 767px) {
+    .events .subscribe form input[type="email"]{
+        border-radius: 0;
+    }
+}
+.events .subscribe form input[type="email"]:focus {
+    outline: none;
+}
+.events .subscribe form input[type="email"]::placeholder {
+    transition: opacity var(--default-transition);
+}
+.events .subscribe form input[type="email"]:focus::placeholder {
+    opacity: 0;
+}
+.events .subscribe form input[type="submit"] {
+    border-radius: 50px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    transition: var(--default-transition);
+}
+@media (max-width: 767px) {
+    .events .subscribe form input[type="submit"]{
+        border-radius: 0;
+    }
+}
+.events .subscribe form input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+/* End Events  */
 /* start animation  */
 @keyframes up-and-down {
     0%,100% {
