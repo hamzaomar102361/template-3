@@ -1328,6 +1328,100 @@ a {
     color: var(--main-color)
 }
 /* end stats */
+/* start discount */
+.discount {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.discount .image  {
+    background-image: url(../Images/discount-background1.jpg);
+    background-size: cover;
+    color: white;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    animation: changebackground 10s linear infinite;
+}
+.discount .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(23 135 224 / 97%);
+    z-index: -1;
+}
+@media (max-width: 991px) {
+    .discount .image {
+        flex-basis: 100%;
+    }
+}
+.discount .form {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .discount .form {
+        flex-basis: 100%;
+        margin-top: 50px;
+    }
+}
+.discount .form .input {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+    caret-color: var(--main-color);
+}
+.discount .form textarea.input {
+    resize: none;
+    height: 200px;
+}
+.discount .form .input:focus {
+    outline: none;
+}
+.discount .form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    transition: var(--default-transition);
+}
+.discount .form input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+.discount .content {
+    text-align: center;
+    padding: 0 20px;
+}
+.discount .content h2 {
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+.discount .content p {
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 500px;
+}
+.discount .content img {
+    max-width: 100%;
+    width: 300px;
+}
+/* end discount */
 /* start animation  */
 @keyframes up-and-down {
     0%,100% {
@@ -1392,5 +1486,13 @@ a {
        width: 200%;
        height: 200%;
    }
+}
+@keyframes changebackground {
+    0%,100% {
+        background-image: url(../Images/discount-background1.jpg);
+    }
+    50% {
+        background-image: url(../Images/discount-background2.jpg);
+    }
 }
 /* end animation  */
