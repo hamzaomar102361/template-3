@@ -1250,6 +1250,84 @@ a {
     margin-top: 10px;
 }
 /* end videos  */
+/* start stats */
+.stats {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: white;
+    min-height: calc(100vh - 300px);
+    background-image: url(../Images/stats.jpg);
+    background-size: cover;
+    position: relative;
+}
+.stats::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 95%);
+}
+.stats h2 {
+    font-size: 40px;
+    font-weight: bold;
+    width: fit-content;
+    margin: 0 auto 50px;
+    position: relative;
+}
+.stats .container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+   gap: 20px;
+}
+.stats .box {
+    background-color: white;
+    padding: 30px 15px;
+    text-align: center;
+    position: relative;
+    opacity: 0.7;
+    transition: var(--default-transition);
+}
+.stats .box:hover {
+    opacity: 1;
+}
+.stats .box::before,
+.stats .box::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: var(--main-color);
+    transition: 1s;
+}
+.stats .box::before {
+    bottom: 0;
+    left: 0;
+
+}
+.stats .box::after {
+    top: 0;
+    right: 0;
+}
+.stats .box:hover::before,
+.stats .box:hover::after {
+    height: 100%;
+}
+.stats .box .number {
+    display: block;
+    font-size: 75px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+.stats .box .text {
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--main-color)
+}
+/* end stats */
 /* start animation  */
 @keyframes up-and-down {
     0%,100% {
